@@ -1,3 +1,4 @@
+
 let numbers = [
     5,
     8,
@@ -8,6 +9,7 @@ let numbers = [
     15,
     16
 ];
+
 
 console.log("Original numbers list: ", numbers)
 for(let i =1 ; i < numbers.length ; i++) // i=1 instead of ‏    0
@@ -41,5 +43,15 @@ for(let i = 1 ; i < numbers.length ; i++)  // i=1 instead of ‏  0
 }
 
 console.log("Numbers list After Desc sorting: ", numbers)
+
+
+
+const fs = require('fs') 
+let data=numbers
+fs.writeFile('Output.txt', data, (err) => { 
+      
+    // In case of a error throw err. 
+    if (err) throw err; 
+}) 
 
 
